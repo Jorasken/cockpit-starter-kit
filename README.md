@@ -73,6 +73,8 @@ Cette partie demande de brancher tes outils ensemble, taillé sur ton activité.
 **Réserve un appel découverte :** https://calendly.com/jorasken/appel-decouverte-ia
 Plus d'infos : https://delegation-ia.fr
 
+**Bloqué quelque part, ou une question ?** Écris-moi directement sur WhatsApp : https://wa.me/33767980666
+
 ---
 
 *Cette maquette t'est offerte pour que tu visualises ton futur cockpit. Personnalise-la autant que tu veux. Voir `LICENSE` pour les conditions d'usage.*
