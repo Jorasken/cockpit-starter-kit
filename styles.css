@@ -6,7 +6,7 @@
 
 :root {
   /* Couleurs (thème sombre éditorial) */
-  --bg-primary: #0a0a0a;
+  --bg-primary: #0A0A0C;
   --bg-secondary: #141414;
   --bg-card: #161616;
   --bg-card-hover: #1d1d1d;
@@ -21,7 +21,7 @@
 
   --accent: #e3af35;        /* or Délégation IA */
   --accent-hover: #f0c14f;
-  --accent-fg: #0a0a0a;
+  --accent-fg: #0A0A0C;
   --accent-muted: rgba(227, 175, 53, 0.12);
 
   --success: #C9A24B;
@@ -427,7 +427,7 @@ a { color: inherit; text-decoration: none; }
 
 .badge-neutral { background-color: var(--bg-muted); color: var(--fg-secondary); border: 1px solid var(--border); }
 .badge-progress { background-color: rgba(138,168,196,0.1); color: var(--info); border: 1px solid rgba(138,168,196,0.3); }
-.badge-done { background-color: rgba(124,169,130,0.1); color: var(--success); border: 1px solid rgba(124,169,130,0.3); }
+.badge-done { background-color: rgba(201,162,75,0.1); color: var(--success); border: 1px solid rgba(201,162,75,0.3); }
 .badge-warn { background-color: rgba(217,169,91,0.1); color: var(--warning); border: 1px solid rgba(217,169,91,0.3); }
 .badge-accent { background-color: var(--accent-muted); color: var(--accent); border: 1px solid rgba(227,175,53,0.3); }
 
