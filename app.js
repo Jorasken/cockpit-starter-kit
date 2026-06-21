@@ -162,7 +162,7 @@ const TABS = [
 
 /* helpers --------------------------------------------------- */
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const icon = (name, cls) => `<svg class="${cls}" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">${ICONS[name] || ''}</svg>`;
+const icon = (name, cls) => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">${ICONS[name] || ''}</svg>`;
 const badge = (kind, text) => `<span class="badge badge-${kind}"><span class="badge-dot" style="background:currentColor"></span>${esc(text)}</span>`;
 
 function kpiGrid(kpis) {

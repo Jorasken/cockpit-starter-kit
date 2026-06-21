@@ -168,6 +168,16 @@ a { color: inherit; text-decoration: none; }
   color: var(--fg-primary);
 }
 
+/* Taille de base de TOUTE icone .ic (evite les SVG geants hors contexte). */
+.ic {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+
 .nav-item .ic {
   width: 18px;
   height: 18px;
