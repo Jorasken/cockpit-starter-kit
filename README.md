@@ -40,7 +40,7 @@ Le plus simple : tu confies ce dossier à ton assistant (Claude ou Codex) et tu 
 
 > Tu n'as pas besoin de savoir coder. Tu décris ton activité, l'assistant fait le reste.
 
-Tu préfères à la main ? Tout le contenu affiché vient du fichier **`app.js`**, dans un bloc en haut clairement marqué **« REMPLACE PAR TES VRAIES DONNÉES »**. Tu changes les textes, tu sauvegardes, tu rouvres la page.
+Tu préfères le faire à la main ? Le dossier contient un bloc clairement marqué **« REMPLACE PAR TES VRAIES DONNÉES »** : tu changes les textes, tu sauvegardes, tu rouvres la page.
 
 ---
 
