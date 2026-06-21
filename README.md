@@ -6,7 +6,7 @@ Tu as entre les mains une **maquette de cockpit** : un tableau de bord qui réun
 
 ## Ce que fait ce code, concrètement
 
-C'est une **petite application web autonome** (faite en HTML, CSS et JavaScript simples, sans aucune dépendance, sans serveur). Quand tu l'ouvres :
+C'est une **petite application web autonome**. Rien à installer, rien à configurer, pas besoin d'internet. Quand tu l'ouvres :
 
 - une **barre de menu à gauche** avec 10 onglets (Cockpit, Acquisition, Ventes, Clients, À délivrer, Pilotage, Ressources, Projets, Agent IA, Paramètres) ;
 - chaque onglet affiche un **vrai écran de pilotage** : indicateurs, listes, badges de statut, cartes, barre de progression, aperçu d'un assistant ;
@@ -52,11 +52,8 @@ Tu veux ta propre adresse web au lieu d'un fichier local ? Demande à ton assist
 
 ## Ce qu'il y a dans le dossier
 
-- `index.html` — la page à ouvrir (le cockpit).
-- `app.js` — le contenu de chaque onglet (le bloc à personnaliser est en haut).
-- `styles.css` — le design (couleurs, mise en page).
-- `prompts/` — les messages prêts à coller dans ton IA (`personnaliser-mon-cockpit`, `questions-a-se-poser`, `aller-plus-loin`).
-- `LICENSE` — conditions d'usage (usage personnel, un business).
+- **`index.html`** — le seul fichier que tu ouvres : double-clique dessus, c'est ton cockpit.
+- Le reste, ce sont les fichiers qui font tourner la page (le contenu des onglets, le design) et un dossier de **messages prêts à coller dans ton IA**. Tu n'as pas besoin d'y toucher : ton assistant s'en occupe.
 
 ---
 
