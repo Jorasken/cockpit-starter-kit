@@ -143,6 +143,7 @@ const ICONS = {
   parametres: '<path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-2.92 1V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-2.92-1l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 8.4l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.14.31.22.66.22 1z"/>',
   search: '<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/>',
   menu: '<path d="M3 6h18M3 12h18M3 18h18"/>',
+  guide: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>',
   check: '<path d="M20 6L9 17l-5-5"/>',
   warn: '<path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>',
 };
@@ -157,6 +158,7 @@ const TABS = [
   { id: 'ressources', label: 'Ressources' },
   { id: 'projets', label: 'Projets' },
   { id: 'agent', label: 'Agent IA' },
+  { id: 'guide', label: 'Guide' },
   { id: 'parametres', label: 'Paramètres' },
 ];
 
@@ -293,6 +295,23 @@ const RENDER = {
         </div>
       </div>
       <div class="empty mt-2">Cet assistant prend vie quand on branche ton vrai système. C’est l’étape qu’on construit ensemble.</div>`;
+  },
+
+  guide() {
+    return `${pageHead('guide', 'Mode d’emploi', 'Guide', 'Comment construire ton cockpit et le faire évoluer. Suis ces étapes toi-même, ou demande à ton assistant IA de les faire avec toi.')}
+      <div class="card mt-3">
+        <div class="card-title">1 · Remplace les exemples par tes vraies infos</div>
+        <p class="page-desc" style="margin-top:.4rem">Toutes les données affichées ici sont des exemples. Ouvre le fichier <code>app.js</code> et modifie le bloc <code>MOCK</code> tout en haut, onglet par onglet — ou colle le prompt <code>prompts/personnaliser-mon-cockpit.md</code> dans ton assistant et laisse-le le faire avec toi. N’invente jamais un chiffre : mets tes vraies infos, ou laisse vide.</p>
+      </div>
+      <div class="card mt-2">
+        <div class="card-title">2 · Mets ton cockpit en ligne</div>
+        <p class="page-desc" style="margin-top:.4rem">Pour y accéder partout, héberge-le sur un lien à toi (c’est gratuit). Colle le prompt <code>prompts/heberger-mon-cockpit.md</code> dans ton assistant : il te guide pas à pas pour le publier sur GitHub Pages ou Netlify.</p>
+      </div>
+      <div class="card mt-2">
+        <div class="card-title">3 · Branche tes vraies données (quand tu veux)</div>
+        <p class="page-desc" style="margin-top:.4rem">Quand tu es prêt à passer de la maquette au vrai système — des tâches, des clients et des chiffres qui se mettent à jour tout seuls — ouvre <code>prompts/aller-plus-loin.md</code>. Pas besoin de tout faire d’un coup : tu avances à ton rythme.</p>
+      </div>
+      <div class="empty mt-2">À chaque étape, le prompt correspondant est dans le dossier <code>prompts</code>. Tu le copies, tu le colles dans Claude ou Codex, et ton assistant avance avec toi.</div>`;
   },
 
   parametres() {
