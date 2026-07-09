@@ -1,0 +1,153 @@
+{
+  "name": "Jorasken Agentic OS Template",
+  "version": "0.2.0",
+  "description": "Manifest source de verite pour generer et verifier le cockpit client.",
+  "principles": [
+    "Le cockpit est le point d'entree humain.",
+    "Le repo et AGENTS.md sont le point d'entree IA.",
+    "Les modules specifiques sont actives par configuration, jamais par copie-colle destructif.",
+    "Les ameliorations du socle doivent profiter aux clients via le core, pas par duplication manuelle."
+  ],
+  "required_categories": [
+    "cockpit",
+    "today",
+    "acquisition",
+    "sales",
+    "clients",
+    "delivery",
+    "resources",
+    "pilotage",
+    "settings"
+  ],
+  "categories": [
+    {
+      "id": "cockpit",
+      "label": "Cockpit",
+      "route": "/cockpit",
+      "position": 10,
+      "tier": "2500",
+      "intent": "Vue d'ensemble: aujourd'hui, objectifs, alertes et prochains choix.",
+      "sop": "sop/03-configurer-cockpit.md",
+      "prompt": "prompts/modules/cockpit.md",
+      "evidence": ["doctor OK", "cockpit-map OK", "rapport install present"]
+    },
+    {
+      "id": "today",
+      "label": "Aujourd'hui",
+      "route": "/today",
+      "position": 20,
+      "tier": "2500",
+      "intent": "Actions prioritaires, taches ouvertes, rappels, decisions a prendre.",
+      "sop": "sop/04-operations-quotidiennes.md",
+      "prompt": "prompts/modules/aujourdhui.md",
+      "evidence": ["liste actions ouverte", "source taches documentee"]
+    },
+    {
+      "id": "acquisition",
+      "label": "Acquisition",
+      "route": "/acquisition",
+      "position": 30,
+      "tier": "5000",
+      "intent": "Sources de leads, contenu, tracking, hooks, images, concurrents.",
+      "sop": "sop/08-module-acquisition.md",
+      "prompt": "prompts/modules/acquisition.md",
+      "evidence": ["sources autorisees listees", "risques anti-ban notes"]
+    },
+    {
+      "id": "sales",
+      "label": "Ventes",
+      "route": "/sales",
+      "position": 40,
+      "tier": "2500",
+      "intent": "Pipeline, offres, paiements, relances et conversion.",
+      "sop": "sop/09-module-ventes.md",
+      "prompt": "prompts/modules/ventes.md",
+      "evidence": ["pipeline structure", "liens paiement hors secrets"]
+    },
+    {
+      "id": "clients",
+      "label": "Clients",
+      "route": "/clients",
+      "position": 50,
+      "tier": "2500",
+      "intent": "Espaces clients, etat accompagnement, sante client, prochains livrables.",
+      "sop": "sop/10-module-clients.md",
+      "prompt": "prompts/modules/clients.md",
+      "evidence": ["aucune PII dans Git", "client_slug non secret"]
+    },
+    {
+      "id": "delivery",
+      "label": "A delivrer",
+      "route": "/delivery",
+      "position": 60,
+      "tier": "2500",
+      "intent": "Demandes entrantes, livrables, ressources a preparer, statuts.",
+      "sop": "sop/11-module-delivery.md",
+      "prompt": "prompts/modules/delivery.md",
+      "evidence": ["workflow demande -> livraison documente"]
+    },
+    {
+      "id": "resources",
+      "label": "Ressources",
+      "route": "/resources",
+      "position": 70,
+      "tier": "2500",
+      "intent": "Docs, prompts, SOP, assets, raccourcis et packs transmis au client.",
+      "sop": "sop/12-module-ressources.md",
+      "prompt": "prompts/modules/ressources.md",
+      "evidence": ["index ressources present", "prompts sans secrets"]
+    },
+    {
+      "id": "pilotage",
+      "label": "Pilotage",
+      "route": "/pilotage",
+      "position": 80,
+      "tier": "2500",
+      "intent": "Healthchecks, agents, sessions IA, crons, erreurs, decisions systeme.",
+      "sop": "sop/13-module-pilotage.md",
+      "prompt": "prompts/modules/pilotage.md",
+      "evidence": ["doctor-last.json", "STOP logs si echec"]
+    },
+    {
+      "id": "settings",
+      "label": "Parametres",
+      "route": "/settings",
+      "position": 90,
+      "tier": "2500",
+      "intent": "Theme, ordre du menu, modules actifs, preferences et integrateurs.",
+      "sop": "sop/14-module-parametres.md",
+      "prompt": "prompts/modules/parametres.md",
+      "evidence": ["config client validee", "aucun token stocke"]
+    }
+  ],
+  "optional_modules": [
+    {
+      "id": "content-intelligence",
+      "label": "Content Intelligence",
+      "category": "acquisition",
+      "tier": "5000",
+      "prompt": "prompts/modules/content-intelligence.md"
+    },
+    {
+      "id": "image-assets",
+      "label": "Images et assets",
+      "category": "resources",
+      "tier": "5000",
+      "prompt": "prompts/modules/images-assets.md"
+    },
+    {
+      "id": "whatsapp-notifications",
+      "label": "Notifications WhatsApp",
+      "category": "pilotage",
+      "tier": "5000",
+      "prompt": "prompts/modules/whatsapp-notifications.md"
+    },
+    {
+      "id": "vertical-backend",
+      "label": "Backend metier sur mesure",
+      "category": "settings",
+      "tier": "5000",
+      "prompt": "prompts/modules/backend-metier.md"
+    }
+  ]
+}
