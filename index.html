@@ -1,69 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr" data-theme="dark-editorial">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark light" />
-    <meta name="robots" content="noindex,nofollow" />
-    <title>Mon espace</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div id="app-shell" class="app-shell">
-      <div id="scrim" class="scrim" aria-hidden="true"></div>
-
-      <aside class="sidebar" aria-label="Navigation principale">
-        <div class="brand">
-          <img src="logo-delegation.png" alt="" class="brand-logo" />
-          <div class="brand-text">
-            <span id="brand-name" class="eyebrow">Espace de pilotage</span>
-            <strong id="business-name">Ton entreprise</strong>
-            <small id="owner-name">Ton prénom</small>
-          </div>
-        </div>
-
-        <nav id="sidebar-nav" class="nav" aria-label="Sections"></nav>
-
-        <nav id="sidebar-foot" class="nav sidebar-foot" aria-label="Aide et réglages"></nav>
-      </aside>
-
-      <div class="workspace">
-        <header class="topbar">
-          <div class="topbar-left">
-            <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Ouvrir le menu">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" width="18" height="18"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
-            </button>
-            <button id="command-trigger" class="search-button" type="button">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" width="14" height="14"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-              <span>Rechercher</span>
-              <kbd>⌘K</kbd>
-            </button>
-          </div>
-          <div class="topbar-actions">
-            <span id="mode-label" class="route-pill">Mon espace</span>
-          </div>
-        </header>
-
-        <main id="app-view" class="main-view" tabindex="-1"></main>
-      </div>
-    </div>
-
-    <dialog id="command-dialog" class="command-dialog">
-      <form method="dialog">
-        <label class="command-search">
-          <span>Aller à une section</span>
-          <input id="command-input" type="search" autocomplete="off" placeholder="Cockpit, clients, ventes, ressources…" />
-        </label>
-        <div id="command-results" class="command-results"></div>
-      </form>
-    </dialog>
-
-    <script src="app.js" type="module"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Cockpit Délégation IA — Maquette de démonstration</title>
+  <meta name="description" content="Maquette statique d'un cockpit business. Données d'exemple uniquement. Personnalise-la avec ton assistant IA." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Toute l'application se monte ici, en JS vanilla. Aucune dépendance. -->
+  <div id="app"></div>
+  <script src="app.js"></script>
+</body>
 </html>
